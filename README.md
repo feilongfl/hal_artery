@@ -9,3 +9,4 @@ ARTERY VENDOR CODE REPO for [Zephyr](https://www.zephyrproject.org/)
 - [ ] refact artery source code.
 - [ ] add pin generate tools.
 - [ ] work for zephyr modules sources.
+- [ ] document this project.
