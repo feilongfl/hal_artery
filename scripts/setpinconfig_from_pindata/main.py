@@ -10,6 +10,13 @@ from pathlib import Path
 REPO_ROOT = Path(__file__).absolute().parents[2]
 
 
+def get_afid(id: int):
+    if(id == 16):
+        return "ANALOG"
+
+    return id
+
+
 def build_afpins(csvfile):
     pins = {}
 
@@ -20,16 +27,17 @@ def build_afpins(csvfile):
                 continue
 
             print(', '.join(row))
-            for id, cell in enumerate(row[1:17]):
+            for id, cell in enumerate(row[1:18]):
                 if(cell == ""):
                     continue
 
                 for func in str.split(cell, " "):
                     print("%s-%d: %s -> %s" % (row[0], id, cell, func))
                     try:
-                        pins[str(row[0])][func] = id
+                        pins[str(row[0])]['afs'][func] = get_afid(id)
                     except:
-                        pins[str(row[0])] = {func: id}
+                        pins[str(row[0])] = {'pincodes': [
+                            'G', 'K', 'C', 'R'], 'afs': {func: get_afid(id)}}
 
     return pins
 
