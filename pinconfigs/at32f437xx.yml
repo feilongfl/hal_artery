@@ -1,0 +1,1277 @@
+# AT32F437XX pin definitions
+#
+# Sources:
+# - AT32F437XX Ref (Revision 2.01)
+# - AT32F437XX Datasheet (Revision 2.01)
+#
+# Pin codes:
+#
+# - 48 pins: C
+# - 64 pins: R
+# - 100 pins: V
+# - 144 pins: Z
+#
+# Memory codes:
+#
+# - 256Kb Flash, 384Kb SRAM: C
+# - 1024Kb Flash, 384Kb SRAM: G
+# - 4032Kb Flash, 384Kb SRAM: M
+#
+# Copyright (c) 2022 YuLong Yao <feilongphone@gmail.com>
+# SPDX-License-Identifier: Apache 2.0
+
+model: af
+
+series: at32f437
+
+variants:
+  - pincode: C
+    memories: [C, G, M]
+  - pincode: R
+    memories: [C, G, M]
+  - pincode: V
+    memories: [C, G, M]
+  - pincode: Z
+    memories: [C, G, M]
+
+signal-configs:
+  USART1_CTS:
+    exclude-memories: [4]
+  USART1_RTS:
+    exclude-memories: [4]
+  USART1_TX:
+    exclude-memories: [4]
+  USART1_RX:
+    exclude-memories: [4]
+  USART1_CK:
+    exclude-memories: [4]
+
+pins:
+  PA0:
+    afs:
+      ADC123_IN0: ANALOG
+      EMAC_MII_CRS: 11
+      EVENTOUT: 15
+      I2C2_SCL: 4
+      TMR2_CH1: 1
+      TMR2_EXT: 1
+      TMR5_CH1: 2
+      TMR8_EXT: 3
+      UART4_TX: 8
+      USART2_CTS: 7
+    pincodes: [C, R, V, Z]
+  PA1:
+    afs:
+      ADC123_IN1: ANALOG
+      EMAC_MII_RX_CLK: 11
+      EMAC_RMII_REF_CLK: 11
+      EVENTOUT: 15
+      I2C2_SDA: 4
+      I2S4_SDEXT: 5
+      QSPI1_IO3: 9
+      SPI4_MOSI: 5
+      TMR2_CH2: 1
+      TMR5_CH2: 2
+      UART4_RX: 8
+      USART2_RTS_DE: 7
+    pincodes: [C, R, V, Z]
+  PA10:
+    afs:
+      DVP_D1: 13
+      EVENTOUT: 15
+      I2C1_SDA: 8
+      I2S2_SDEXT: 5
+      I2S4_MCK: 6
+      OTG1_ID: 10
+      SPI2_MOSI: 5
+      TMR1_CH3: 1
+      USART1_RX: 7
+    pincodes: [C, R, V, Z]
+  PA11:
+    afs:
+      CAN1_RX: 9
+      DVP_D2: 13
+      EVENTOUT: 15
+      I2C2_SCL: 4
+      I2S2_WS: 5
+      OTG1_D-: 10
+      SPI2_CS: 5
+      SPI4_MISO: 6
+      TMR1_CH4: 1
+      USART1_CTS: 7
+      USART6_TX: 8
+    pincodes: [C, R, V, Z]
+  PA12:
+    afs:
+      CAN1_TX: 9
+      DVP_D3: 13
+      EVENTOUT: 15
+      I2C2_SDA: 4
+      OTG1_D+: 10
+      SPI2_MISO: 5
+      TMR1_EXT: 1
+      USART1_RTS_DE: 7
+      USART6_RX: 8
+    pincodes: [C, R, V, Z]
+  PA13:
+    afs:
+      EVENTOUT: 15
+      IR_OUT: 1
+      JTMS: 0
+      OTG1_OE: 10
+      SPI3_MISO: 6
+      SWDIO: 0
+    pincodes: [C, R, V, Z]
+  PA14:
+    afs:
+      EVENTOUT: 15
+      I2S3_SDEXT: 6
+      JTCK: 0
+      SPI3_MOSI: 6
+      SWCLK: 0
+      USART2_TX: 8
+    pincodes: [C, R, V, Z]
+  PA15:
+    afs:
+      EVENTOUT: 15
+      I2S1_WS: 5
+      I2S3_WS: 6
+      JTDI: 0
+      QSPI1_IO2: 10
+      QSPI2_IO1: 9
+      SPI1_CS: 5
+      SPI3_CS: 6
+      TMR2_CH1: 1
+      TMR2_EXT: 1
+      USART1_TX: 7
+      USART2_RX: 8
+      XMC_NCE3: 12
+      XMC_NE2: 12
+    pincodes: [C, R, V, Z]
+  PA2:
+    afs:
+      ADC123_IN2: ANALOG
+      EMAC_MDIO: 11
+      EVENTOUT: 15
+      SDIO2_CK: 10
+      TMR2_CH3: 1
+      TMR5_CH3: 2
+      TMR9_CH1: 3
+      USART2_TX: 7
+      XMC_D4: 14
+    pincodes: [C, R, V, Z]
+  PA3:
+    afs:
+      ADC123_IN3: ANALOG
+      EMAC_MII_COL: 11
+      EVENTOUT: 15
+      I2S2_MCK: 5
+      QSPI2_IO3: 9
+      SDIO2_CMD: 10
+      TMR2_CH4: 1
+      TMR5_CH4: 2
+      TMR9_CH2: 3
+      USART2_RX: 7
+      XMC_D5: 14
+    pincodes: [C, R, V, Z]
+  PA4:
+    afs:
+      ADC12_IN4: ANALOG
+      DAC1_OUT: ANALOG
+      DVP_HSYNC: 13
+      EVENTOUT: 15
+      I2S1_WS: 5
+      I2S3_WS: 6
+      OTG2_SOF: 12
+      SDIO2_D0: 11
+      SDIO2_D4: 10
+      SPI1_CS: 5
+      SPI3_CS: 6
+      USART2_CK: 7
+      USART6_TX: 8
+      XMC_D6: 14
+    pincodes: [C, R, V, Z]
+  PA5:
+    afs:
+      ADC12_IN5: ANALOG
+      DAC2_OUT: ANALOG
+      EVENTOUT: 15
+      I2S1_CK: 5
+      QSPI2_IO2: 9
+      SDIO2_D1: 11
+      SDIO2_D5: 10
+      SPI1_SCK: 5
+      TMR2_CH1: 1
+      TMR2_EXT: 1
+      TMR8_CH1C: 3
+      USART6_RX: 8
+      XMC_D7: 14
+    pincodes: [C, R, V, Z]
+  PA6:
+    afs:
+      ADC12_IN6: ANALOG
+      DVP_PIXCLK: 13
+      EVENTOUT: 15
+      I2S2_MCK: 6
+      QSPI1_IO0: 10
+      SDIO1_CMD: 12
+      SDIO2_D2: 11
+      SDIO2_D6: 14
+      SPI1_MISO: 5
+      TMR13_CH1: 9
+      TMR1_BRK: 1
+      TMR3_CH1: 2
+      TMR8_BRK: 3
+      USART3_CTS: 7
+    pincodes: [C, R, V, Z]
+  PA7:
+    afs:
+      ADC12_IN7: ANALOG
+      EMAC_MII_RX_DV: 11
+      EMAC_RMII_CRS_DV: 11
+      EVENTOUT: 15
+      I2S1_SDEXT: 5
+      QSPI1_IO1: 10
+      SDIO2_D3: 13
+      SDIO2_D7: 14
+      SPI1_MOSI: 5
+      TMR14_CH1: 9
+      TMR1_CH1C: 1
+      TMR3_CH2: 2
+      TMR8_CH1C: 3
+      XMC_SDNWE: 12
+    pincodes: [C, R, V, Z]
+  PA8:
+    afs:
+      CLKOUT1: 0
+      EVENTOUT: 15
+      I2C3_SCL: 4
+      OTG1_SOF: 10
+      SDIO1_D1: 12
+      TMR1_CH1: 1
+      USART1_CK: 7
+      USART2_TX: 8
+      XMC_A4: 14
+    pincodes: [C, R, V, Z]
+  PA9:
+    afs:
+      DVP_D0: 13
+      EVENTOUT: 15
+      I2C1_SCL: 8
+      I2C3_SMBA: 4
+      I2S2_CK: 5
+      OTG1_VBUS: 10
+      SDIO1_D2: 12
+      SPI2_SCK: 5
+      TMR1_CH2: 1
+      USART1_TX: 7
+    pincodes: [C, R, V, Z]
+  PB0:
+    afs:
+      ADC12_IN8: ANALOG
+      EMAC_MII_RXD2: 11
+      EVENTOUT: 15
+      I2S1_MCK: 5
+      I2S3_SDEXT: 7
+      QSPI1_IO0: 10
+      QSPI2_IO0: 9
+      SDIO1_D1: 12
+      SPI3_MOSI: 7
+      TMR1_CH2C: 1
+      TMR3_CH3: 2
+      TMR8_CH2C: 3
+      USART2_RX: 6
+      USART3_CK: 8
+    pincodes: [C, R, V, Z]
+  PB1:
+    afs:
+      ADC12_IN9: ANALOG
+      EMAC_MII_RXD3: 11
+      EVENTOUT: 15
+      I2S2_CK: 6
+      QSPI1_SCK: 9
+      QSPI2_SCK: 10
+      SDIO1_D2: 12
+      SPI2_SCK: 6
+      TMR1_CH3C: 1
+      TMR3_CH4: 2
+      TMR8_CH3C: 3
+      USART3_RTS_DE: 8
+    pincodes: [C, R, V, Z]
+  PB10:
+    afs:
+      EMAC_MII_RX_ER: 11
+      EVENTOUT: 15
+      I2C2_SCL: 4
+      I2S2_CK: 5
+      I2S3_MCK: 6
+      QSPI1_CS: 9
+      QSPI1_IO1: 10
+      SDIO1_D7: 12
+      SPI2_SCK: 5
+      TMR2_CH3: 1
+      USART3_TX: 7
+      XMC_NOE: 14
+    pincodes: [C, R, V, Z]
+  PB11:
+    afs:
+      EMAC_MII_TX_EN: 11
+      EMAC_RMII_TX_EN: 11
+      EVENTOUT: 15
+      I2C2_SDA: 4
+      QSPI1_IO0: 10
+      TMR2_CH4: 1
+      TMR5_CH4: 2
+      USART3_RX: 7
+    pincodes: [C, R, V, Z]
+  PB12:
+    afs:
+      CAN2_RX: 9
+      EMAC_MII_TXD0: 11
+      EMAC_RMII_TXD0: 11
+      EVENTOUT: 15
+      I2C2_SMBA: 4
+      I2S2_WS: 5
+      I2S3_CK: 7
+      I2S4_WS: 6
+      OTG2_ID: 12
+      SPI2_CS: 5
+      SPI3_SCK: 7
+      SPI4_CS: 6
+      TMR1_BRK: 1
+      TMR5_CH1: 2
+      USART3_CK: 8
+      XMC_D13: 14
+    pincodes: [C, R, V, Z]
+  PB13:
+    afs:
+      CAN2_TX: 9
+      EMAC_MII_TXD1: 11
+      EMAC_RMII_TXD1: 11
+      EVENTOUT: 15
+      I2C3_SCL: 7
+      I2C3_SMBA: 4
+      I2S2_CK: 5
+      I2S4_CK: 6
+      OTG2_VBUS: 12
+      SPI2_SCK: 5
+      SPI4_SCK: 6
+      TMR1_CH1C: 1
+      USART3_CTS: 8
+    pincodes: [C, R, V, Z]
+  PB14:
+    afs:
+      EVENTOUT: 15
+      I2C3_SDA: 4
+      I2S2_SDEXT: 6
+      OTG2_D-: 12
+      SDIO1_D6: 13
+      SPI2_MISO: 5
+      TMR12_CH1: 9
+      TMR1_CH2C: 1
+      TMR8_CH2C: 3
+      USART3_RTS_DE: 7
+      XMC_D0: 14
+    pincodes: [C, R, V, Z]
+  PB15:
+    afs:
+      ERTC_REFIN: 0
+      EVENTOUT: 15
+      I2C3_SCL: 4
+      I2S2_SDEXT: 5
+      OTG2_D+: 12
+      SDIO1_CK: 13
+      SPI2_MOSI: 5
+      TMR12_CH2: 9
+      TMR1_CH3C: 1
+      TMR8_CH3C: 3
+    pincodes: [C, R, V, Z]
+  PB2:
+    afs:
+      EVENTOUT: 15
+      I2C3_SMBA: 4
+      I2S3_SDEXT: 7
+      QSPI1_SCK: 9
+      SDIO1_CK: 12
+      SPI3_MOSI: 7
+      TMR20_CH1: 2
+      TMR2_CH4: 1
+    pincodes: [C, R, V, Z]
+  PB3:
+    afs:
+      DVP_D4: 13
+      EVENTOUT: 15
+      I2C2_SDA: 4
+      I2S1_CK: 5
+      I2S3_CK: 6
+      JTDO: 0
+      QSPI1_IO3: 10
+      SPI1_SCK: 5
+      SPI3_SCK: 6
+      SWO: 0
+      TMR2_CH2: 1
+      UART7_RX: 8
+      USART1_RX: 7
+    pincodes: [C, R, V, Z]
+  PB4:
+    afs:
+      DVP_D5: 13
+      EVENTOUT: 15
+      I2C3_SDA: 4
+      I2S3_SDEXT: 7
+      JNTRST: 0
+      SDIO1_D0: 12
+      SPI1_MISO: 5
+      SPI3_MISO: 6
+      TMR3_CH1: 2
+      UART7_TX: 8
+    pincodes: [C, R, V, Z]
+  PB5:
+    afs:
+      CAN2_RX: 9
+      DVP_D10: 13
+      EMAC_PPS_OUT: 11
+      EVENTOUT: 15
+      I2C1_SMBA: 4
+      I2S1_SDEXT: 5
+      I2S3_SDEXT: 6
+      SDIO1_D3: 14
+      SPI1_MOSI: 5
+      SPI3_MOSI: 6
+      TMR3_CH2: 2
+      UART5_RX: 8
+      USART1_CK: 7
+      XMC_SDCKE1: 12
+    pincodes: [C, R, V, Z]
+  PB6:
+    afs:
+      CAN2_TX: 9
+      DVP_D5: 13
+      EVENTOUT: 15
+      I2C1_SCL: 4
+      I2S1_MCK: 5
+      I2S4_WS: 6
+      QSPI1_CS: 10
+      SDIO1_D0: 14
+      SPI4_CS: 6
+      TMR4_CH1: 2
+      UART5_TX: 8
+      USART1_TX: 7
+      XMC_SDCS1: 12
+    pincodes: [C, R, V, Z]
+  PB7:
+    afs:
+      DVP_VSYNC: 13
+      EVENTOUT: 15
+      I2C1_SDA: 4
+      I2S4_CK: 6
+      QSPI2_IO1: 9
+      SDIO1_D0: 14
+      SPI4_SCK: 6
+      TMR4_CH2: 2
+      TMR8_BRK: 3
+      USART1_RX: 7
+      XMC_NADV: 12
+    pincodes: [C, R, V, Z]
+  PB8:
+    afs:
+      CAN1_RX: 9
+      DVP_D6: 13
+      EMAC_MII_TXD3: 11
+      EVENTOUT: 15
+      I2C1_SCL: 4
+      QSPI2_CS: 10
+      SDIO1_D4: 12
+      SPI4_MISO: 6
+      TMR10_CH1: 3
+      TMR2_CH1: 1
+      TMR2_EXT: 1
+      TMR4_CH3: 2
+      UART5_RX: 8
+    pincodes: [C, R, V, Z]
+  PB9:
+    afs:
+      CAN1_TX: 9
+      DVP_D7: 13
+      EVENTOUT: 15
+      I2C1_SDA: 4
+      I2C2_SDA: 7
+      I2S2_WS: 5
+      I2S4_SDEXT: 6
+      IR_OUT: 0
+      QSPI1_CS: 10
+      SDIO1_D5: 12
+      SPI2_CS: 5
+      SPI4_MOSI: 6
+      TMR11_CH1: 3
+      TMR2_CH2: 1
+      TMR4_CH4: 2
+      UART5_TX: 8
+    pincodes: [C, R, V, Z]
+  PC0:
+    afs:
+      ADC123_IN10: ANALOG
+      EVENTOUT: 15
+      I2C3_SCL: 4
+      SDIO2_D0: 10
+      UART7_TX: 8
+      XMC_SDNWE: 12
+    pincodes: [R, V, Z]
+  PC1:
+    afs:
+      ADC123_IN11: ANALOG
+      EMAC_MDC: 11
+      EVENTOUT: 15
+      I2C3_SDA: 4
+      I2S2_SDEXT: 7
+      I2S3_SDEXT: 5
+      SDIO2_D1: 10
+      SPI2_MOSI: 7
+      SPI3_MOSI: 5
+      UART7_RX: 8
+    pincodes: [R, V, Z]
+  PC10:
+    afs:
+      DVP_D8: 13
+      EVENTOUT: 15
+      I2S3_CK: 6
+      QSPI1_IO1: 9
+      SDIO1_D2: 12
+      SPI3_SCK: 6
+      TMR5_CH2: 2
+      UART4_TX: 8
+      USART3_TX: 7
+    pincodes: [R, V, Z]
+  PC11:
+    afs:
+      DVP_D4: 13
+      EVENTOUT: 15
+      I2S3_SDEXT: 5
+      QSPI1_CS: 9
+      SDIO1_D3: 12
+      SPI3_MISO: 6
+      TMR5_CH3: 2
+      UART4_RX: 8
+      USART3_RX: 7
+      XMC_D2: 14
+    pincodes: [R, V, Z]
+  PC12:
+    afs:
+      DVP_D9: 13
+      EVENTOUT: 15
+      I2C2_SDA: 4
+      I2S3_SDEXT: 6
+      SDIO1_CK: 12
+      SPI3_MOSI: 6
+      TMR11_CH1: 3
+      UART5_TX: 8
+      USART3_CK: 7
+      XMC_D3: 14
+    pincodes: [R, V, Z]
+  PC13:
+    afs:
+      EVENTOUT: 15
+    pincodes: [C, R, V, Z]
+  PC14:
+    afs:
+      EVENTOUT: 15
+    pincodes: [C, R, V, Z]
+  PC15:
+    afs:
+      EVENTOUT: 15
+    pincodes: [C, R, V, Z]
+  PC2:
+    afs:
+      ADC123_IN12: ANALOG
+      EMAC_MII_TXD2: 11
+      EVENTOUT: 15
+      I2S2_SDEXT: 6
+      SDIO2_D2: 10
+      SPI2_MISO: 5
+      TMR20_CH2: 2
+      UART8_TX: 8
+      XMC_NWE: 14
+      XMC_SDCS0: 12
+    pincodes: [R, V, Z]
+  PC3:
+    afs:
+      ADC123_IN13: ANALOG
+      EMAC_MII_TX_CLK: 11
+      EVENTOUT: 15
+      I2S2_SDEXT: 5
+      QSPI2_IO1: 9
+      SDIO2_D3: 10
+      SPI2_MOSI: 5
+      UART8_RX: 8
+      XMC_A0: 14
+      XMC_SDCKE0: 12
+    pincodes: [R, V, Z]
+  PC4:
+    afs:
+      ADC12_IN14: ANALOG
+      EMAC_MII_RXD0: 11
+      EMAC_RMII_RXD0: 11
+      EVENTOUT: 15
+      I2S1_MCK: 5
+      QSPI1_IO2: 10
+      SDIO2_CK: 13
+      TMR9_CH1: 3
+      USART3_TX: 7
+      XMC_NE4: 14
+      XMC_SDCS0: 12
+    pincodes: [R, V, Z]
+  PC5:
+    afs:
+      ADC12_IN15: ANALOG
+      EMAC_MII_RXD1: 11
+      EMAC_RMII_RXD1: 11
+      EVENTOUT: 15
+      I2C1_SMBA: 4
+      QSPI1_IO3: 10
+      SDIO2_CMD: 13
+      TMR9_CH2: 3
+      USART3_RX: 7
+      XMC_NOE: 14
+      XMC_SDCKE0: 12
+    pincodes: [R, V, Z]
+  PC6:
+    afs:
+      DVP_D0: 13
+      EVENTOUT: 15
+      I2C1_SCL: 4
+      I2S2_MCK: 5
+      SDIO1_D6: 12
+      TMR3_CH1: 2
+      TMR8_CH1: 3
+      USART6_TX: 8
+      XMC_A0: 10
+      XMC_D1: 14
+    pincodes: [R, V, Z]
+  PC7:
+    afs:
+      DVP_D1: 13
+      EVENTOUT: 15
+      I2C1_SDA: 4
+      I2S2_CK: 5
+      I2S3_MCK: 6
+      SDIO1_D7: 12
+      SPI2_SCK: 5
+      TMR3_CH2: 2
+      TMR8_CH2: 3
+      USART6_RX: 8
+      XMC_A1: 10
+    pincodes: [R, V, Z]
+  PC8:
+    afs:
+      DVP_D2: 13
+      EVENTOUT: 15
+      I2S4_MCK: 5
+      QSPI1_IO2: 9
+      SDIO1_D0: 12
+      TMR20_CH3: 6
+      TMR3_CH3: 2
+      TMR8_CH3: 3
+      UART8_TX: 7
+      USART6_CK: 8
+      XMC_A2: 10
+    pincodes: [R, V, Z]
+  PC9:
+    afs:
+      CLKOUT2: 0
+      DVP_D3: 13
+      EVENTOUT: 15
+      I2C3_SDA: 4
+      OTG2_OE: 11
+      QSPI1_IO0: 9
+      SDIO1_D1: 12
+      TMR3_CH4: 2
+      TMR8_CH4: 3
+      UART8_RX: 7
+      XMC_A3: 10
+    pincodes: [R, V, Z]
+  PD0:
+    afs:
+      CAN1_RX: 9
+      EVENTOUT: 15
+      I2S2_WS: 7
+      I2S3_SDEXT: 6
+      SPI2_CS: 7
+      SPI3_MOSI: 6
+      SPI4_MISO: 5
+      XMC_A5: 10
+      XMC_D2: 12
+    pincodes: [V, Z]
+  PD1:
+    afs:
+      CAN1_TX: 9
+      EVENTOUT: 15
+      I2S2_CK: 6
+      I2S2_WS: 7
+      SPI2_CS: 7
+      SPI2_SCK: 6
+      XMC_A6: 10
+      XMC_D3: 12
+    pincodes: [V, Z]
+  PD10:
+    afs:
+      EMAC_MII_RXD1: 11
+      EMAC_RMII_RXD1: 11
+      EVENTOUT: 15
+      USART3_CK: 7
+      XMC_D15: 12
+    pincodes: [V, Z]
+  PD11:
+    afs:
+      EMAC_MII_RXD2: 11
+      EVENTOUT: 15
+      I2C2_SMBA: 4
+      QSPI1_IO0: 9
+      USART3_CTS: 7
+      XMCCLE: 12
+      XMC_A14: 10
+      XMC_A16: 12
+      XMC_SDBA0: 10
+    pincodes: [V, Z]
+  PD12:
+    afs:
+      EMAC_MII_RXD3: 11
+      EVENTOUT: 15
+      I2C2_SCL: 4
+      QSPI1_IO1: 9
+      TMR4_CH1: 2
+      USART3_RTS_DE: 7
+      XMCALE: 12
+      XMC_A15: 10
+      XMC_A17: 12
+      XMC_SDBA1: 10
+    pincodes: [V, Z]
+  PD13:
+    afs:
+      EVENTOUT: 15
+      I2C2_SDA: 4
+      QSPI1_IO3: 9
+      TMR4_CH2: 2
+      UART8_TX: 8
+      XMC_A18: 12
+      XMC_SD_CLK: 10
+    pincodes: [V, Z]
+  PD14:
+    afs:
+      EVENTOUT: 15
+      I2C3_SCL: 4
+      TMR4_CH3: 2
+      UART8_RX: 8
+      XMC_D0: 12
+    pincodes: [V, Z]
+  PD15:
+    afs:
+      EVENTOUT: 15
+      I2C3_SDA: 4
+      TMR4_CH4: 2
+      XMC_D1: 12
+    pincodes: [V, Z]
+  PD2:
+    afs:
+      DVP_D11: 13
+      EVENTOUT: 15
+      SDIO1_CMD: 12
+      TMR3_EXT: 2
+      UART5_RX: 8
+      USART3_RTS_DE: 7
+      XMC_A7: 10
+      XMC_NWE: 14
+    pincodes: [R, V, Z]
+  PD3:
+    afs:
+      DVP_D5: 13
+      EVENTOUT: 15
+      I2S2_CK: 5
+      QSPI1_SCK: 9
+      SPI2_MISO: 6
+      SPI2_SCK: 5
+      USART2_CTS: 7
+      XMC_A8: 10
+      XMC_CLK: 12
+    pincodes: [V, Z]
+  PD4:
+    afs:
+      EVENTOUT: 15
+      I2S2_SDEXT: 6
+      SPI2_MOSI: 6
+      USART2_RTS_DE: 7
+      XMC_A9: 10
+      XMC_NOE: 12
+    pincodes: [V, Z]
+  PD5:
+    afs:
+      EVENTOUT: 15
+      USART2_TX: 7
+      XMC_A10: 10
+      XMC_NWE: 12
+    pincodes: [V, Z]
+  PD6:
+    afs:
+      DVP_D10: 13
+      EVENTOUT: 15
+      I2S3_SDEXT: 5
+      SPI3_MOSI: 5
+      USART2_RX: 7
+      XMC_A11: 10
+      XMC_NWAIT: 12
+    pincodes: [V, Z]
+  PD7:
+    afs:
+      EVENTOUT: 15
+      USART2_CK: 7
+      XMC_A12: 10
+      XMC_NCE2: 12
+      XMC_NE1: 12
+    pincodes: [V, Z]
+  PD8:
+    afs:
+      EMAC_MII_RX_DV: 11
+      EMAC_RMII_CRS_DV: 11
+      EVENTOUT: 15
+      USART3_TX: 7
+      XMC_D13: 12
+    pincodes: [V, Z]
+  PD9:
+    afs:
+      EMAC_MII_RXD0: 11
+      EMAC_RMII_RXD0: 11
+      EVENTOUT: 15
+      USART3_RX: 7
+      XMC_D14: 12
+    pincodes: [V, Z]
+  PE0:
+    afs:
+      C_SDDQML: 12
+      DVP_D2: 13
+      EVENTOUT: 15
+      TMR20_EXT: 6
+      TMR4_EXT: 2
+      UART8_RX: 8
+      XMC_LB/XM: 12
+    pincodes: [V， Z]
+  PE1:
+    afs:
+      DVP_D3: 13
+      EVENTOUT: 15
+      MC_SDDQMH: 12
+      TMR1_CH2C: 1
+      TMR20_CH4: 6
+      UART8_TX: 8
+      XMC_UB/X: 12
+    pincodes: [V， Z]
+  PE10:
+    afs:
+      EVENTOUT: 15
+      QSPI2_IO3: 10
+      TMR1_CH2C: 1
+      UART5_TX: 8
+      XMC_D7: 12
+    pincodes: [V， Z]
+  PE11:
+    afs:
+      EVENTOUT: 15
+      I2S4_WS: 5
+      SPI4_CS: 5
+      TMR1_CH2: 1
+      UART5_RX: 8
+      XMC_D8: 12
+    pincodes: [V， Z]
+  PE12:
+    afs:
+      EVENTOUT: 15
+      I2S1_WS: 4
+      I2S4_CK: 5
+      SPI1_CS: 4
+      SPI4_SCK: 5
+      TMR1_CH3C: 1
+      XMC_D9: 12
+    pincodes: [V， Z]
+  PE13:
+    afs:
+      EVENTOUT: 15
+      I2S1_CK: 4
+      SPI1_SCK: 4
+      SPI4_MISO: 5
+      TMR1_CH3: 1
+      XMC_D10: 12
+    pincodes: [V， Z]
+  PE14:
+    afs:
+      EVENTOUT: 15
+      I2S4_SDEXT: 5
+      SPI1_MISO: 4
+      SPI4_MOSI: 5
+      TMR1_CH4: 1
+      XMC_D11: 12
+    pincodes: [V， Z]
+  PE15:
+    afs:
+      EVENTOUT: 15
+      I2S1_SDEXT: 4
+      SPI1_MOSI: 4
+      TMR1_BRK: 1
+      XMC_D12: 12
+    pincodes: [V， Z]
+  PE2:
+    afs:
+      EMAC_MII_TXD3: 11
+      EVENTOUT: 15
+      I2S4_CK: 5
+      QSPI1_IO2: 9
+      SPI4_SCK: 5
+      TMR20_CH1: 6
+      TMR3_EXT: 2
+      XMC_A23: 12
+      XMC_SDNCAS: 10
+    pincodes: [V, Z]
+  PE3:
+    afs:
+      DVP_D9: 13
+      EVENTOUT: 15
+      TMR20_CH2: 6
+      TMR3_CH1: 2
+      XMC_A19: 12
+    pincodes: [V, Z]
+  PE4:
+    afs:
+      CLKOUT1: 0
+      DVP_D4: 13
+      EVENTOUT: 15
+      I2S4_WS: 5
+      SPI4_CS: 5
+      TMR20_CH1C: 6
+      TMR3_CH2: 2
+      XMC_A20: 12
+    pincodes: [V, Z]
+  PE5:
+    afs:
+      DVP_D6: 13
+      EVENTOUT: 15
+      SPI4_MISO: 5
+      TMR20_CH2C: 6
+      TMR3_CH3: 2
+      TMR9_CH1: 3
+      XMC_A21: 12
+    pincodes: [V, Z]
+  PE6:
+    afs:
+      DVP_D7: 13
+      EVENTOUT: 15
+      I2S4_SDEXT: 5
+      SPI4_MOSI: 5
+      TMR20_CH3C: 6
+      TMR3_CH4: 2
+      TMR9_CH2: 3
+      XMC_A22: 12
+      XMC_SDNRAS: 10
+    pincodes: [V, Z]
+  PE7:
+    afs:
+      EVENTOUT: 15
+      QSPI2_IO0: 10
+      TMR1_EXT: 1
+      UART7_RX: 8
+      XMC_D4: 12
+    pincodes: [V， Z]
+  PE8:
+    afs:
+      EVENTOUT: 15
+      QSPI2_IO1: 10
+      TMR1_CH1C: 1
+      UART4_TX: 7
+      UART7_TX: 8
+      XMC_D5: 12
+    pincodes: [V， Z]
+  PE9:
+    afs:
+      EVENTOUT: 15
+      QSPI2_IO2: 10
+      TMR1_CH1: 1
+      UART4_RX: 7
+      XMC_D6: 12
+    pincodes: [V， Z]
+  PF0:
+    afs:
+      EVENTOUT: 15
+      I2C2_SDA: 4
+      XMC_A0: 12
+    pincodes: [Z]
+  PF1:
+    afs:
+      EVENTOUT: 15
+      I2C2_SCL: 4
+      XMC_A1: 12
+    pincodes: [Z]
+  PF10:
+    afs:
+      ADC3_IN8: ANALOG
+      DVP_D11: 13
+      EVENTOUT: 15
+      QSPI1_SCK: 9
+      TMR1_EXT: 1
+      TMR5_CH4: 2
+      XMC_INTR: 12
+    pincodes: [Z]
+  PF11:
+    afs:
+      DVP_D12: 13
+      EVENTOUT: 15
+      TMR20_EXT: 2
+      TMR8_EXT: 3
+      XMC_SDNRAS: 12
+    pincodes: [Z]
+  PF12:
+    afs:
+      EVENTOUT: 15
+      TMR20_CH1: 2
+      TMR8_BRK: 3
+      XMC_A6: 12
+    pincodes: [Z]
+  PF13:
+    afs:
+      EVENTOUT: 15
+      I2C3_SMBA: 4
+      TMR20_CH2: 2
+      XMC_A7: 12
+    pincodes: [Z]
+  PF14:
+    afs:
+      EVENTOUT: 15
+      I2C3_SCL: 4
+      TMR20_CH3: 2
+      XMC_A8: 12
+    pincodes: [Z]
+  PF15:
+    afs:
+      EVENTOUT: 15
+      I2C3_SDA: 4
+      TMR20_CH4: 2
+      XMC_A9: 12
+    pincodes: [Z]
+  PF2:
+    afs:
+      EVENTOUT: 15
+      I2C2_SMBA: 4
+      TMR20_CH3: 2
+      XMC_A2: 12
+    pincodes: [Z]
+  PF3:
+    afs:
+      ADC3_IN9: ANALOG
+      EVENTOUT: 15
+      TMR20_CH4: 2
+      XMC_A3: 12
+    pincodes: [Z]
+  PF4:
+    afs:
+      ADC3_IN14: ANALOG
+      EVENTOUT: 15
+      TMR20_CH1C: 2
+      XMC_A4: 12
+    pincodes: [Z]
+  PF5:
+    afs:
+      ADC3_IN15: ANALOG
+      EVENTOUT: 15
+      TMR20_CH2C: 2
+      XMC_A5: 12
+    pincodes: [Z]
+  PF6:
+    afs:
+      ADC3_IN4: ANALOG
+      EVENTOUT: 15
+      QSPI1_IO3: 9
+      TMR10_CH1: 3
+      TMR20_CH4: 2
+      UART7_RX: 8
+      XMC_NIORD: 12
+    pincodes: [Z]
+  PF7:
+    afs:
+      ADC3_IN5: ANALOG
+      EVENTOUT: 15
+      QSPI1_IO2: 9
+      TMR11_CH1: 3
+      TMR20_BRK: 2
+      UART7_TX: 8
+      XMC_NREG: 12
+    pincodes: [Z]
+  PF8:
+    afs:
+      ADC3_IN6: ANALOG
+      EVENTOUT: 15
+      QSPI1_IO0: 10
+      TMR13_CH1: 9
+      XMC_NIOWR: 12
+    pincodes: [Z]
+  PF9:
+    afs:
+      ADC3_IN7: ANALOG
+      EVENTOUT: 15
+      QSPI1_MOSI_IO1: 10
+      TMR14_CH1: 9
+      TMR20_BRK: 2
+      XMC_CD: 12
+    pincodes: [Z]
+  PG0:
+    afs:
+      CAN1_RX: 9
+      EVENTOUT: 15
+      SPI1_MISO: 5
+      TMR20_CH1C: 2
+      XMC_A10: 12
+    pincodes: [Z]
+  PG1:
+    afs:
+      CAN1_TX: 9
+      EVENTOUT: 15
+      I2S1_SDEXT: 5
+      SPI1_MOSI: 5
+      TMR20_CH2C: 2
+      XMC_A11: 12
+    pincodes: [Z]
+  PG10:
+    afs:
+      DVP_D2: 13
+      EVENTOUT: 15
+      QSPI2_IO2: 5
+      XMC_NCE4_1: 12
+      XMC_NE3: 12
+    pincodes: [Z]
+  PG11:
+    afs:
+      CAN2_RX: 9
+      DVP_D3: 13
+      EMAC_MII_TX_EN: 11
+      EMAC_RMII_TX_EN: 11
+      EVENTOUT: 15
+      I2S4_CK: 6
+      QSPI2_IO3: 5
+      SPI4_SCK: 6
+      XMC_NCE4_2: 12
+    pincodes: [Z]
+  PG12:
+    afs:
+      CAN2_TX: 9
+      EVENTOUT: 15
+      QSPI2_IO1: 5
+      SPI4_MISO: 6
+      USART6_RTS_DE: 8
+      XMC_NE4: 12
+    pincodes: [Z]
+  PG13:
+    afs:
+      EMAC_MII_TXD0: 11
+      EMAC_RMII_TXD0: 11
+      EVENTOUT: 15
+      I2S4_SDEXT: 6
+      QSPI2_SCK: 5
+      SPI4_MOSI: 6
+      USART6_CTS: 8
+      XMC_A24: 12
+    pincodes: [Z]
+  PG14:
+    afs:
+      EMAC_MII_TXD1: 11
+      EMAC_RMII_TXD1: 11
+      EVENTOUT: 15
+      I2S4_WS: 6
+      QSPI1_IO3: 9
+      QSPI2_IO0: 5
+      SPI4_CS: 6
+      USART6_TX: 8
+      XMC_A25: 12
+    pincodes: [Z]
+  PG15:
+    afs:
+      DVP_D13: 13
+      EVENTOUT: 15
+      USART6_CTS: 8
+      XMC_SDNCAS: 12
+    pincodes: [Z]
+  PG2:
+    afs:
+      EVENTOUT: 15
+      TMR20_CH3C: 2
+      XMC_A12: 12
+    pincodes: [Z]
+  PG3:
+    afs:
+      EVENTOUT: 15
+      TMR20_BRK: 2
+      XMC_A13: 12
+    pincodes: [Z]
+  PG4:
+    afs:
+      EVENTOUT: 15
+      XMC_A14: 12
+      XMC_SDBA0: 12
+    pincodes: [Z]
+  PG5:
+    afs:
+      EVENTOUT: 15
+      TMR20_EXT: 2
+      XMC_A15: 12
+      XMC_SDBA1: 12
+    pincodes: [Z]
+  PG6:
+    afs:
+      DVP_D12: 13
+      EVENTOUT: 15
+      QSPI1_CS: 10
+      XMC_INT2: 12
+    pincodes: [Z]
+  PG7:
+    afs:
+      DVP_D13: 13
+      EVENTOUT: 15
+      USART6_CK: 8
+      XMC_INT3: 12
+    pincodes: [Z]
+  PG8:
+    afs:
+      EMAC_PPS_OUT: 11
+      EVENTOUT: 15
+      QSPI2_CS: 5
+      USART6_RTS_DE: 8
+      XMC_SDCLK: 12
+    pincodes: [Z]
+  PG9:
+    afs:
+      DVP_VSYNC: 13
+      EVENTOUT: 15
+      QSPI1_IO2: 9
+      USART6_RX: 8
+      XMC_NCE3: 12
+      XMC_NE2: 12
+    pincodes: [Z]
+  PH0:
+    afs:
+      EVENTOUT: 15
+      I2C1_SDA: 4
+    pincodes: [C, R, V, Z]
+  PH1:
+    afs:
+      EVENTOUT: 15
+      I2C1_SCL: 4
+    pincodes: [C, R, V, Z]
+  PH2:
+    afs:
+      EVENTOUT: 15
+      I2C2_SCL: 4
+      QSPI1_IO0: 10
+      TMR5_CH1: 2
+      UART4_RX: 8
+    pincodes: [C, R, V, Z]
+  PH3:
+    afs:
+      EVENTOUT: 15
+      I2C2_SDA: 4
+      QSPI1_IO1: 10
+      TMR5_CH2: 2
+      UART4_TX: 8
+    pincodes: [C, R, V, Z]
